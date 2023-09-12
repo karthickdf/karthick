@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Quiz
+        </title>
+        <link rel="stylesheet" href="./work5.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                const timer = document.querySelector('#timer');
+                var count = 31;
+                window.setInterval(function(){
+                    count = count - 1;
+                    timer.innerHTML = count;  
+                    if(count == 0){
+                        window.location.href = "./question2.html"
+                    }
+                }, 1000)
+            })
+        </script>
+    </head>
+    <body>
+        <center><div class="heading"><h1>Practice Quiz</h1></div></center>
+        <br><br>    
+        <div id="timer-text">Time remaining: <span id="timer">30</span><span> sec</span></div>
+        <br>
+        <div class="container">
+        <div class="quiz-info">
+            <p class="total-questions">Total Question: 20</p>
+            <p class="question-no">Question no: 1</p>
+            <p class="time">Timing for each question: 30sec</p>
+        </div>
+        <div class="question">
+            <p><b>Which animal is called the king of jungle</b></p>
+        </div>
+        <div class="answer">
+            <form action="./question2.html">
+            <input type="radio" name="options" value="lion" id="option1">
+            <label for="option1">Lion</label><br><br>
+            
+            <input type="radio" name="options" value="tiger" id="option2">
+            <label for="option2">Tiger</label><br><br>
+            
+            <input type="radio" name="options" value="elephant" id="option3">
+            <label for="option3">Elephant</label><br><br>
+            
+            <input type="radio" name="options" value="cat" id="option4">
+            <label for="option4">Cheetah</label><br><br><br>
+
+            <input class="button" type="submit" value="submit">
+            <input class="button" type="reset" value="clear">
+            <br><br>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
